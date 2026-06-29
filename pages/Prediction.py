@@ -21,7 +21,7 @@ padding:25px;border-radius:18px;color:white;margin-bottom:20px">
 """, unsafe_allow_html=True)
 
 # =========================
-# MAPPINGS (TEXT → NUMBERS)
+# MAPPINGS
 # =========================
 cp_map = {
     "Typical Angina": 0,
@@ -91,7 +91,6 @@ with st.form("prediction_form"):
 # =========================
 if submit:
 
-    # تحويل categorical → numeric
     sex = 1 if sex == "Male" else 0
     cp = cp_map[cp]
     fbs = fbs_map[fbs]
@@ -101,14 +100,12 @@ if submit:
     thal = thal_map[thal]
     exang = 1 if exang == "Yes" else 0
 
-    # ترتيب لازم يكون نفس تدريب الموديل
     input_data = np.array([[
         age, sex, cp, trestbps, chol, fbs,
         restecg, thalach, exang, oldpeak,
         slope, ca, thal
     ]])
 
-    # التوقع
     prob = model.predict_proba(input_data)[0]
 
     healthy_prob = prob[0]
