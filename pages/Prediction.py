@@ -21,6 +21,31 @@ padding:25px;border-radius:18px;color:white;margin-bottom:20px">
 """, unsafe_allow_html=True)
 
 # =========================
+# MODEL INFORMATION
+# =========================
+st.markdown("""
+<div style="
+background:#1E293B;
+padding:18px;
+border-radius:15px;
+margin-bottom:20px;
+border-left:5px solid #38BDF8;">
+
+<h3 style="color:white;margin:0;">🤖 Prediction Model</h3>
+
+<p style="color:#CBD5E1;margin-top:10px;">
+<b>Algorithm:</b> Random Forest Classifier
+<br><br>
+This model predicts the likelihood of heart disease based on the patient's medical information.
+<br><br>
+<b>Model Accuracy:</b>
+<span style="color:#38BDF8;font-size:18px;font-weight:bold;">83.61%</span>
+</p>
+
+</div>
+""", unsafe_allow_html=True)
+
+# =========================
 # MAPPINGS
 # =========================
 cp_map = {
