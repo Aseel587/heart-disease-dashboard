@@ -6,7 +6,6 @@ st.logo("https://img.icons8.com/fluency/96/heart-with-pulse.png")
 # ===============================
 # LOAD DATA
 # ===============================
-@st.cache_data
 def load_data():
     return pd.read_csv("heart.csv")
 
